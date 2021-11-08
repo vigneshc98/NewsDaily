@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import NewsItem from './NewsItem';
 import Spinner from './Spinner';
-// import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
 import Error from './Error.js'
 
@@ -13,8 +12,6 @@ const News = (props) => {
     const [page, setpage] = useState(1);
     const [totalArticles, settotalArticles] = useState(0);
     const [err, seterr] = useState(false);
-    // const titleRef = useRef(document.title);
-    // document.title=`${capitalizeFirstLetter(props.category)}-News Daily`
 
 let capitalizeFirstLetter=(string) =>{
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -42,7 +39,6 @@ const updateNews = async () => {
    }
 }
 
-// used instead of componentDidmount 
  useEffect(() => {
     updateNews();
 
